@@ -1,0 +1,50 @@
+1, Orgullo y prejuicio, Jane Austen, 1813, T. Egerton, 432, 4.26, Romance
+2, Cien años de soledad, Gabriel García Márquez, 1967, Editorial Sudamericana, 417, 4.09, Realismo Mágico
+3, Harry Potter y la piedra filosofal, J.K. Rowling, 1997, Bloomsbury, 223, 4.47, Fantasía
+4, El código Da Vinci, Dan Brown, 2003, Doubleday, 454, 3.89, Misterio
+5, Los juegos del hambre, Suzanne Collins, 2008, Scholastic Press, 374, 4.33, Acción
+6, El nombre del viento, Patrick Rothfuss, 2007, DAW Books, 662, 4.49, Fantasía
+7, Matar a un ruiseñor, Harper Lee, 1960, J.B. Lippincott & Co., 324, 4.28, Realismo
+8, La sombra del viento, Carlos Ruiz Zafón, 2001, Planeta, 576, 4.31, Misterio
+9, 1984, George Orwell, 1949, Secker & Warburg, 328, 4.18, Acción
+10, La bella y la bestia, Jeanne-Marie Leprince de Beaumont, 1756, Fables et contes, 64, 4.10, Romance
+11, El hobbit, J.R.R. Tolkien, 1937, George Allen & Unwin, 310, 4.27, Fantasía
+12, El gran Gatsby, F. Scott Fitzgerald, 1925, Charles Scribner's Sons, 180, 3.91, Romance
+13, Crónica de una muerte anunciada, Gabriel García Márquez, 1981, Editorial Villalba, 120, 4.05, Realismo Mágico
+14, La trilogía de la Fundación, Isaac Asimov, 1951, Gnome Press, 944, 4.29, Ciencia Ficción
+15, La casa de los espíritus, Isabel Allende, 1982, Plaza & Janés, 432, 4.25, Realismo Mágico
+16, Los pilares de la tierra, Ken Follett, 1989, Macmillan, 973, 4.34, Histórico
+17, El nombre de la rosa, Umberto Eco, 1980, Bompiani, 512, 4.13, Misterio
+18, Las crónicas de Narnia: El león, la bruja y el ropero, C.S. Lewis, 1950, Geoffrey Bles, 208, 4.21, Fantasía
+19, El retrato de Dorian Gray, Oscar Wilde, 1890, Lippincott's Monthly Magazine, 254, 4.11, Filosofía
+20, El conde de Montecristo, Alexandre Dumas, 1844, Paget & Co., 1276, 4.26, Aventura
+21, La princesa de hielo, Camilla Läckberg, 2003, Pirámide, 400, 4.01, Misterio
+22, Danza de dragones, George R.R. Martin, 2011, Bantam Books, 1040, 4.43, Fantasía
+23, Violetas de marzo, Sarah Jio, 2011, Penguin Group, 400, 4.04, Romance
+24, El sabueso de los Baskerville, Arthur Conan Doyle, 1902, George Newnes Ltd., 256, 4.15, Misterio
+25, El alquimista, Paulo Coelho, 1988, Editorial Río de la Plata, 208, 3.88, Aventura
+26, La chica del tren, Paula Hawkins, 2015, Riverhead Books, 395, 3.92, Misterio
+27, La ladrona de libros, Markus Zusak, 2005, Knopf Books, 560, 4.37, Histórico
+28, El circo de la noche, Erin Morgenstern, 2011, Doubleday, 387, 4.01, Fantasía
+29, Bajo la misma estrella, John Green, 2012, Dutton Books, 313, 4.19, Romance
+30, El nombre del viento, Patrick Rothfuss, 2007, DAW Books, 662, 4.49, Fantasía
+31, Mujer que mira al cielo, Alfredo Álamo, 2007, Ediciones Versátil, 368, 4.00, Romance
+32, El retrato de Dorian Gray, Oscar Wilde, 1890, Lippincott's Monthly Magazine, 254, 4.11, Filosofía
+33, El príncipe, Nicolás Maquiavelo, 1532, Antonio Blado, 104, 4.17, Filosofía Política
+34, El secreto, Rhonda Byrne, 2006, Atria Books, 198, 3.92, Autoayuda
+35, El club de la pelea, Chuck Palahniuk, 1996, W.W. Norton & Company, 224, 4.19, Thriller Psicológico
+36, El amor en los tiempos del cólera, Gabriel García Márquez, 1985, Editorial Oveja Negra, 368, 4.10, Romance
+37, La saga de los Azores, Hilda Hilst, 1984, Editorial Braziliense, 246, 4.05, Realismo Mágico
+38, Crónica de una muerte anunciada, Gabriel García Márquez, 1981, Editorial Villalba, 120, 4.05, Misterio
+39, La sombra del viento, Carlos Ruiz Zafón, 2001, Planeta, 576, 4.31, Misterio
+40, El silencio de los corderos, Thomas Harris, 1988, St. Martin's Press, 352, 4.15, Thriller Psicológico
+41, La isla del tesoro, Robert Louis Stevenson, 1883, Cassell & Company, 288, 4.18, Aventura
+42, Dune, Frank Herbert, 1965, Chilton Books, 412, 4.24, Ciencia Ficción
+43, La divina comedia, Dante Alighieri, 1320, Varias ediciones, 798, 4.28, Poesía Épica
+44, La verdad sobre el caso Harry Quebert, Joël Dicker, 2012, Éditions de Fallois, 688, 4.06, Misterio
+45, Los miserables, Victor Hugo, 1862, A. Lacroix, Verboeckhoven & Cie, 1463, 4.25, Histórico
+46, El gran Gatsby, F. Scott Fitzgerald, 1925, Charles Scribner's Sons, 180, 3.91, Romance
+47, La caverna, José Saramago, 2000, Editorial Caminho, 288, 4.05, Realismo
+48, Cumbres Borrascosas, Emily Brontë, 1847, Thomas Cautley Newby, 416, 4.05, Romance
+49, La torre oscura: El pistolero, Stephen King, 1982, Viking Penguin, 224, 4.23, Fantasía
+50, El viejo y el mar, Ernest Hemingway, 1952, Charles Scribner's Sons, 127, 4.09, Realismo
