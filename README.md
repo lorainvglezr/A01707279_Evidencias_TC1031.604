@@ -24,6 +24,7 @@ Posterior a esto, luego de obtener el ejecutable, poner en la terminal el siguie
 Este proyecto incluye varios archivos, como main.cpp, Usuario.h y Biblioteca.h, entre otros. La utilización de "El Faro del Saber" sin alguno de estos archivos puede provocar que el programa no funcione como se espera.
 Asegúrate de tener todos los archivos necesarios en el mismo directorio antes de compilar para garantizar el correcto funcionamiento del sistema.
 
+# Evidencia 1: Proyecto
 # Desarrollo de Competencias
 ## SICT0301: Evalúa los componentes
 ### Hace un análisis de complejidad correcto y completo para los algoritmos de ordenamiento usados en el programa
@@ -83,3 +84,9 @@ El uso de este mecanismo de lectura asegura que los datos se carguen correctamen
 ### Implementa mecanismos de escritura de archivos para guardar los datos  de las estructuras de manera correcta
 Además de la lectura, "El Faro del Saber" también incorpora mecanismos efectivos para guardar datos de las estructuras. La función "registrarUsuario", que se encuentra en el archivo "Usuario.h", permite almacenar la información del usuario en un archivo de texto. Asimismo, la clase _Stack_ proporciona métodos para gestionar y almacenar los libros comprados, asegurando que la información se mantenga persistente entre sesiones. La implementación de estas funciones de escritura no solo garantiza que los datos se guarden correctamente, sino que también permite que el sistema se recupere de manera eficiente en futuras ejecuciones. Esto es esencial para la experiencia del usuario, ya que asegura que la información sobre los libros y los usuarios no se pierda.
 - _Registrar usuario:_ (líneas 7 a 27 en el archivo "Usuario.h")
+
+# Evidencia 2: Problemas
+### Enlaces a vídeo explicativos:
+- _Evidencia - Video 1 (Algoritmos de ordenamiento):_ https://drive.google.com/file/d/1LdskBApe4ZVgVWTRWENQvZ5D1C6um5eh/view?usp=share_link
+- _Evidencia - Video 2 (Estructuras Lineales):_ https://drive.google.com/file/d/14CAWrjE0U2VGOH7rYLl8zb8YQP2Va2ey/view?usp=share_link
+- _Evidencia - Video 3 (Estructuras No Lineales):_ https://drive.google.com/file/d/1uyPftmWDKVlrH5vr4SEAwlvNSxYyqcRY/view?usp=sharing
