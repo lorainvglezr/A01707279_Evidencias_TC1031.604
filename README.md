@@ -1,71 +1,62 @@
-# Faro del Saber - Proyecto de Gestión de Biblioteca
-El proyecto a realizar es un desarollo de programa que simula una biblioteca, este programa busca permitir que los usuarios puedan visualizar los libros que se encuentran disponibles en la librería. Por otro lado, la biblioteca permitirá que el usuario pueda crear un perfil y en dicho perfil se guarden sus datos hasta que este decida salir del programa o abandonar la biblioteca. Asimismo, esta biblioteca virtual será capaz de darle la opción al usuario de evaluar aquellos libros que estén disponibles y de agregar otros y calificarlos de igual forma, poniendo los nuevos libros registrados en una lista para futuras adquisiciones de la biblioteca. Por último, este programa se está generando con la idea de ayudar a que el usuario registre sus gustos y vaya teniendo una secuencia de los libros leídos, para ser más conscientes y recordar aquellas lecturas que fueron parte de alguna etapa de su vida. 
+# Faro del Saber
+¡Bi͏enve͏nido a la biblioteca virtual "El Faro del Saber"! E͏ste innovador proyecto cambia la manera ͏en que ͏ves y manejas t͏us li͏bros preferidos. Dicho esto, te invito a imaginar un mu͏ndo en ͏donde puedas buscar una gran colección ͏de libros y textos, pone͏rla en el orden que más te acomode y comprar tus títu͏los favoritos con tan solo unos clics.
+Con una interfaz amigable y un͏ menú interactivo,͏ "El Faro del Saber" te permite aventurarte y sumergirte en un increible mundo de libros que cuentan con diversos autores, géneros y precios, todo esto mientras disfrutas de la libertad de organizar la informa͏ción como quieras. Ya se que ͏busques el li͏b͏ro más vie͏jo, el que tiene la mejor puntuación͏ o el más barato, aca lo puedes encontrar, ya que todo está a tu alc͏ance. 
+Pero ͏eso n͏o es ͏todo͏ ya que esta propuesta de proyecto también se i͏nt͏eresa ͏en saber͏ un poco más de t͏i. Regístrate de una manera muy sencilla y rápida con el fin de llevar una serie ló͏gica de tus͏ compras͏, asegurando que cada libro que obtiene͏s sea único, irrepetible y especial. La gesti͏ón de usuarios es ͏su͏ave y s͏egur͏o͏ ͏permitiendo inicia͏r sesión y gozar͏ ͏de una experien͏cia muy p͏ersonal.
+Ven y prueba este proyecto "El Faro del Saber" y descubre un universo literario donde cada página cuenta. ¡Tu próxima aventura literaria te espera!
+*Este proyecto realizado por mi persona, Lorain González, ha sido basado en la idea de generar una plataforma amigable como la de Goodreads y Amazon Kindle.*  
 
-## Descripción del avance 1
-El proyecto "Faro del Saber" es una aplicación de gestión de biblioteca que permite a los usuarios registrarse, iniciar sesión, prestar y devolver libros de una colección de literatura. La información sobre los libros, como el título, autor y disponibilidad, se almacena en un archivo de texto. Los usuarios pueden también registrar sus credenciales en un archivo separado, lo que permite un acceso personalizado a la biblioteca.
+## Descripción del Proyecto
+El programa "El Faro del Saber" es una biblioteca virtual diseñada para facilitar la gestión y adquisición de libros por parte de los usuarios. A continuación se detalla su funcionamiento y las características principales que fueron implementadas para su fácil comprensión y uso:
 
-### Funcionalidades principales
-1. *Registro de Usuarios:* Permite a nuevos usuarios crear una cuenta con un nombre y una contraseña.
-2. *Inicio de Sesión:* Los usuarios pueden iniciar sesión con sus credenciales para acceder a las funcionalidades de la biblioteca.
-3. *Gestión de Libros:* Los usuarios pueden ver la lista de libros disponibles, así como prestar y devolver libros.
-4. *Registro de Devoluciones:* Al devolver un libro, los usuarios pueden dejar una calificación y una reseña.
-
-## Estructuras del proyecto
-- *Libros.txt:* Contiene la lista de libros con su ID, título, autor y estado de disponibilidad.
-- *Usuarios.txt:* Almacena los nombres de usuario y contraseñas de los usuarios registrados.
+### Funcionalidades Principales y Flujo de Trabajo del Programa
+**1. Registro e Inicio de Sesión:** Los usuarios pueden registrarse creando una cuenta que incluye su nombre, apellido, edad, nombre de usuario y contraseña. Esta información se almacena en un archivo de texto, lo que nos hace implementar mecanismos de escritura de archivos de texto. Además, los usuarios pueden iniciar sesión utilizando el nombre de usuario y contraseña que establecieron anteriormente, esto con el fin de acceder a las funcionalidades del sistema.
+**2. Carga de Libros:** El programa carga una colección de libros desde un archivo de texto, lo que ocasiona que se cumpla con la implementacion de mecanismos de lectura de archivos de texto. Hay que mencionar que cada libro contiene información relevante acerca del mismo, datos tales como título, autor, año de publicación, editorial, número de páginas que contiene el libro, calificación general del libro, género literario y precio en el mercado.
+**3. Interfaz de Usuario Interactiva:** Una vez que el usuario ha iniciado sesión, se presenta un menú interactivo que permite navegar por varias opciones. Las opciones incluyen mostrar todos los libros en el orden inicial en el que se encuentran en el archivo de texto, ordenarlos basándonos en diferentes criterios (año de publicación, número de páginas, calificación y precio), comprar libros y ver la lista de libros que han sido adquiridos sin repetición.
+**4. Ordenamiento de Libros:** Los libros pueden ser ordenados utilizando un algoritmo de ordenamiento llamado Merge Sort, el orden en el que aparecerán los libros está basado en diferentes criterios seleccionados por el usuario, criterios mencionados anteriormente. Esto permite a los usuarios encontrar fácilmente libros que se ajusten a sus preferencias.
+**5. Compra de Libros:** Los usuarios pueden "comprar" libros ingresando el índice del libro que desean adquirir, tomando en cuenta el último orden en el que se encuentran los libros; si los libros nunca fueron ordenados, se tomarán los índices de acuerdo al orden inicial de la lista de libros. El sistema verifica que el libro no haya sido comprado previamente y, si es válido, lo agrega a una lista de libros comprados, esto se hace con el fin asegurar que cada libro solo pueda ser adquirido una vez.
+**6. Visualización de Libros Comprados:** Los usuarios pueden ver una lista de los libros que han adquirido, mostrando información detallada sobre cada uno, lo que les permite llevar un registro de sus compras.
+**7. Manejo de Errores:** El programa incluye validaciones para asegurar que los usuarios ingresen opciones válidas en el menú y que los índices de los libros sean correctos, mejorando así la experiencia del usuario.
+En resumen, "El Faro del Saber" es un sistema integral que combina la gestión de usuarios y libros en un entorno virtual, facilitando la exploración, compra y organización de libros de manera eficiente y accesible, mientras ofrece una experiencia interactiva y amigable para el usuario.
 
 ## Ejecución 
-Para correr el programa, es necesario ejecutar el siguiente comando en la terminal
-"g++ -std=c++11 main.cpp" y cuando aparezca el ejecutable poner "./a.out". 
+El proyecto "El Faro del Saber" está diseñado para ejecutarse exclusivamente en el lenguaje C++, por lo que pueden surgir errores si se intenta utilizar otro lenguaje de programación. Para compilar el proyecto correctamente, se recomienda utilizar el siguiente comando en la terminal: ´g++ -std=c++11 main.cpp´. 
+Posterior a esto, luego de obtener el ejecutable, poner en la terminal el siguiente comando: ´./a.out` 
+Este proyecto incluye varios archivos, como main.cpp, Usuario.h y Biblioteca.h, entre otros. La utilización de "El Faro del Saber" sin alguno de estos archivos puede provocar que el programa no funcione como se espera.
+Asegúrate de tener todos los archivos necesarios en el mismo directorio antes de compilar para garantizar el correcto funcionamiento del sistema.
 
-## Descripción de las Clases y Estructuras
-- *Libro:* Representa un libro con atributos como ID, título, autor y estado de disponibilidad.
-- *Usuario:* Representa un usuario con atributos para el nombre y la contraseña.
-
-**Funciones:**
-  1. *cargarLibros():* Carga la información de los libros desde el archivo libros.txt.
-  2. *cargarUsuarios():* Carga la información de los usuarios desde el archivo usuarios.txt.
-  3. *mostrarLibros():* Muestra la lista de libros disponibles.
-  4. *buscarLibro():* Busca un libro por su ID y verifica su disponibilidad.
-  5. *registrarUsuario():* Permite a un nuevo usuario registrarse.
-  6. *iniciarSesion():* Verifica las credenciales de un usuario.
-  7. *prestarLibro():* Permite a un usuario prestar un libro.
-  8. *devolverLibro():* Permite a un usuario devolver un libro y dejar una reseña.
-  9. *mostrarDevoluciones():* Muestra un historial de libros devueltos.
- 
-## Descripción de las Entradas
-Los usuarios pueden interactuar con el sistema a través de un menú que les permite elegir opciones para registrarse, iniciar sesión, prestar y devolver libros.
-
-## Descripción de las Salidas
-El sistema muestra mensajes informativos sobre el estado de las operaciones realizadas, como la confirmación de registro, el inicio de sesión, la disponibilidad de libros, y el estado de las devoluciones.
-
-# Desarrollo de competencias
-
+# Desarrollo de Competencias
 ## SICT0301: Evalúa los componentes
+### Hace un análisis de complejidad correcto y completo para los algoritmos de ordenamiento usados en el programa
+**Merge Sort** es un algoritmo de ordenamiento que se utiliza en el proyecto del "El Faro del Saber" al momento de ordenar una lista de libros. A continuación se presenta un análisis de su complejidad en diferentes casos:
+- _División:_ En cada paso, el algoritmo divide la lista en dos mitades. Este proceso se realiza logarítmicamente, ya que cada división reduce el tamaño de la lista a la mitad. Por lo tanto, el número de divisiones necesarias para llegar a listas de un solo elemento es O(log n), donde n es el número de elementos en la lista.
+- _Ordenamiento y Fusión:_ Después de dividir la lista, Merge Sort ordena y fusiona las sublistas o listas derivadas. La fusión de dos listas ordenadas requiere recorrer todos los elementos de ambas listas, lo que tiene una complejidad de O(n).
+**Complejidad en Diferentes Casos:**
+- _Mejor Caso:_ Se tiene una complejidad de O(n log n) y esto ocurre porque, cuando la lista ya está ordenada, el algoritmo aún debe dividir y fusionar las listas.
+- _Caso Promedio:_ Se tiene una complejidad de O(n log n). En la mayoría de los escenarios, el algoritmo de ordenamiento sigue dividiendo y fusionando, manteniendo esta complejidad.
+- _Peor Caso:_ Tiene una complejidad de O(n log n). Esto también ocurre cuando la lista está en el orden inverso, ya que el algoritmo sigue dividiendo y fusionando.
+**Conclusión:** Merge Sort es un algoritmo eficiente con una complejidad de O(n log n), lo que lo hace adecuado para manejar listas de libros que pueden ser grandes. Esto es especialmente relevante si el programa se utiliza con una base de datos de libros extensa. Por otro lado, es un algoritmo estable, lo que significa que mantiene el orden relativo de los elementos con valores iguales. Esto es beneficioso en el contexto de los libros, ya que si dos libros tienen la misma calificación o año de publicación, su orden relativo en la lista se conservará después de la ordenación.
+### Hace un análisis de complejidad correcto y completo de todas las estructuras de datos y cada uno de sus usos en el programa
+La estructura de datos _Stack_ se utiliza en el programa para gestionar los libros comprados. A continuación se presenta un análisis de su complejidad:
+**Operaciones en la Pila:**
+- _Push (Agregar un libro):_ Esta operación tiene una complejidad de O(1), ya que simplemente se agrega un elemento al final de la lista que representa la pila.
+- _Pop (Eliminar un libro):_ Similar a la operación de push, pop también tiene una complejidad de O(1), ya que implica eliminar el último elemento de la lista.
+- _Top (Obtener el libro en la cima):_ Esta operación también cuenta con complejidad de O(1), ya que solo se necesita acceder al último elemento de la lista.
+- _Mostrar libros (Recorrer la pila):_ Para mostrar todos los libros en la pila, se requiere recorrer todos los elementos, lo que tiene una complejidad de O(n), donde n es el número de libros en la pila.
+**Complejidad en Diferentes Casos:**
+- _Mejor Caso:_ Se tiene una complejidad de O(1), esto si se toman en cuenta las operaciones de push, pop y top.
+- _Caso Promedio:_ Se tiene una complejidad de O(1), dado que las operaciones siguen siendo O(1) en promedio.
+- _Peor Caso:_ Se tiene una complejidad de O(n) porque solo se aplica a la operación de mostrar libros, que requiere recorrer todos los elementos en la pila.
+**_Conclusión:_** Las operaciones de inserción y eliminación en la pila son muy eficientes, con una complejidad de O(1). Sin embargo, mostrar todos los libros tiene una complejidad de O(n), por lo tanto la complejidad final de la estructura de datos es de O(n).
+### Hace un análisis de complejidad correcto y completo para todos los demás componentes del programa y determina la complejidad final del programa
 
-*Hace un análisis de complejidad correcto y completo para los algoritmos de ordenamiento usados en el programa.*
-He realizado un análisis de complejidad para las operaciones de búsqueda y ordenamiento en la gestión de libros. La búsqueda de un libro por ID tiene una complejidad de O(n) en el peor de los casos, mientras que el ordenamiento de libros se realiza utilizando sort, que tiene una complejidad promedio de O(n log n). Línea 56 del main.cpp. 
-
-*Hace un análisis de complejidad correcto y completo de todas las estructuras de datos y cada uno de sus usos en el programa.*
-Se ha utilizado un vector para almacenar los libros, lo que permite un acceso rápido a los elementos y un crecimiento dinámico. La pila se utiliza para gestionar las devoluciones, permitiendo un acceso eficiente a los libros devueltos en el orden en que fueron devueltos. Línea 10 del main.cpp. 
-
-*Hace un análisis de complejidad correcto y completo para todos los demás componentes del programa y determina la complejidad final del programa.*
-He analizado la complejidad de las funciones que manejan la carga de datos y la gestión de usuarios, determinando que las operaciones de lectura y escritura de archivos tienen una complejidad de O(n), donde n es el número de líneas en los archivos. Línea 20 del main.cpp. 
 
 ## SICT0302: Toma decisiones
-
-*Selecciona un algoritmo de ordenamiento adecuado al problema y lo usa correctamente.*
-He optado por utilizar el algoritmo sort de la biblioteca estándar de C++, que es eficiente y adecuado para el tamaño de los datos manejados en este proyecto. Esto asegura un rendimiento óptimo al ordenar la lista de libros, manteniendo una complejidad promedio de O(n log n). Línea 56 del main.cpp
-
-*Selecciona una estructura de datos adecuada al problema y la usa correctamente.*
-He elegido utilizar un vector para almacenar los libros debido a su capacidad de crecimiento dinámico y facilidad de acceso. Esto permite realizar operaciones de búsqueda y ordenamiento de manera eficiente. Además, he utilizado una pila (stack) para gestionar las devoluciones de libros, lo que permite un manejo eficiente siguiendo el principio LIFO (Last In, First Out). Línea 10 del main.cpp
+### Selecciona un algoritmo de ordenamiento adecuado al problema y lo usa correctamente
+Para el proyecto "El Faro del Saber", se ha seleccionado el algoritmo de ordenamiento llamado Merge Sort debido a su eficiencia y estabilidad, a lo que me refiero con estabilidad es que la principal ventaja de este algoritmo de ordenamiento se basa en que es constante, por lo que su ejecución se da en un tiempo constante, lo que quiere decir que no tiene mejor o peor caso, siempre su numero de operaciónnes será la misma. Merge Sort opera con una complejidad de O(n log n) en todos los casos, lo que lo convierte en una opción robusta para manejar listas grandes de libros como la que tenemos en la biblioteca, asegurando un rendimiento consistente sin importar la disposición inicial de los datos. Esta característica es especialmente valiosa en un entorno donde se pueden tener grandes volúmenes de información. Además, la estabilidad del algoritmo de ordenamiento garantiza que el orden relativo de los elementos iguales se mantenga, lo cual es crucial cuando se trabaja con libros que pueden compartir títulos, editoriales o autores. El enfoque de "dividir y conquistar" de Merge Sort no solo facilita su implementación, sino que también permite que el algoritmo sea fácilmente paralelizable, lo que ocasiona que sea mucho más sencilla la optimización del uso de recursos en sistemas con múltiples núcleos de procesamiento. En resumen, Merge Sort se adapta perfectamente a las necesidades del proyecto, ofreciendo un método eficiente y confiable para el ordenamiento de datos.
+### Selecciona una estructura de datos adecuada al problema y la usa correctamente
+En cuanto a la estructura de datos, opté por utilizar una Stack (pila), que se alinea perfectamente con la naturaleza de las operaciones requeridas en el sistema de gestión de libros comprados. La pila, con su comportamiento LIFO (Last In, First Out), permite un acceso eficiente a los libros más recientemente comprados, lo que es esencial para un sistema donde la rapidez de respuesta es fundamental. Las operaciones de inserción y eliminación en una pila son extremadamente eficientes, con una complejidad de O(1) en todos los casos, lo que permite que el sistema maneje las compras de manera ágil. Además, la implementación de una pila es sencilla y proporciona un control claro sobre el estado de los libros comprados, facilitando funcionalidades como el historial de compras. Esta estructura no solo mejora la eficiencia operativa del sistema, sino que también enriquece la experiencia del usuario al permitir un acceso rápido y directo a la información más relevante. En conjunto, la elección de la pila como estructura de datos complementa de manera ideal el uso de Merge Sort, creando un sistema robusto y eficiente para el presente proyecto llamado "El Faro del Saber".
 
 ## SICT0303: Implementa acciones científicas
-*Implementa mecanismos para consultar información de las estructras correctos.*
-He implementado funciones que permiten a los usuarios consultar la información de los libros disponibles y realizar operaciones de préstamo y devolución. Estas funciones son intuitivas y aseguran que los usuarios puedan acceder a la información relevante de manera rápida y eficiente. Líneas 45-50 del  main.cpp. 
-
-*Implementa mecanismos de lectura de archivos para cargar datos a las estructuras de manera correcta.*
-He desarrollado mecanismos de lectura de archivos que permiten cargar correctamente los datos desde libros.txt y usuarios.txt. Utilizo un ciclo que recorre cada línea del archivo, extrayendo la información necesaria y almacenándola en las estructuras de datos adecuadas. Esto garantiza que la información esté organizada y lista para ser utilizada en el programa. Líneas 20-25 del main.cpp. 
-
-*Implementa mecanismos de escritura de archivos para guardar los datos  de las estructuras de manera correcta.*
-He implementado un mecanismo de escritura en archivos que permite guardar de forma precisa y organizada los datos de los libros y usuarios. Al finalizar la sesión, se actualizan los archivos libros.txt y usuarios.txt para reflejar los cambios en la disponibilidad de los libros y la información de los usuarios. Esto asegura que la información se mantenga persistente entre sesiones y que los datos sean consistentes.Líneas 70-75 del main.cpp. 
+### Implementa mecanismos para consultar información de las estructras correctos
+### Implementa mecanismos de lectura de archivos para cargar datos a las estructuras de manera correcta
+### Implementa mecanismos de escritura de archivos para guardar los datos  de las estructuras de manera correcta
