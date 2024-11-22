@@ -19,8 +19,8 @@ El programa "El Faro del Saber" es una biblioteca virtual diseñada para facilit
 En resumen, "El Faro del Saber" es un sistema integral que combina la gestión de usuarios y libros en un entorno virtual, facilitando la exploración, compra y organización de libros de manera eficiente y accesible, mientras ofrece una experiencia interactiva y amigable para el usuario.
 
 ## Ejecución 
-El proyecto "El Faro del Saber" está diseñado para ejecutarse exclusivamente en el lenguaje C++, por lo que pueden surgir errores si se intenta utilizar otro lenguaje de programación. Para compilar el proyecto correctamente, se recomienda utilizar el siguiente comando en la terminal: ´g++ -std=c++11 main.cpp´. 
-Posterior a esto, luego de obtener el ejecutable, poner en la terminal el siguiente comando: ´./a.out` 
+El proyecto "El Faro del Saber" está diseñado para ejecutarse exclusivamente en el lenguaje C++, por lo que pueden surgir errores si se intenta utilizar otro lenguaje de programación. Para compilar el proyecto correctamente, se recomienda utilizar el siguiente comando en la terminal: _´g++ -std=c++11 main.cpp´. _
+Posterior a esto, luego de obtener el ejecutable, poner en la terminal el siguiente comando: _´./a.out` _
 Este proyecto incluye varios archivos, como main.cpp, Usuario.h y Biblioteca.h, entre otros. La utilización de "El Faro del Saber" sin alguno de estos archivos puede provocar que el programa no funcione como se espera.
 Asegúrate de tener todos los archivos necesarios en el mismo directorio antes de compilar para garantizar el correcto funcionamiento del sistema.
 
@@ -68,5 +68,10 @@ En cuanto a la estructura de datos, opté por utilizar una Stack (pila), que se 
 
 ## SICT0303: Implementa acciones científicas
 ### Implementa mecanismos para consultar información de las estructras correctos
+El proyecto utiliza un enfoque estructurado para permitir a los usuarios consultar información sobre los libros de manera eficiente. A diferencia de otros programas que pueden utilizar algoritmos y estructuras de datos menos óptimas, "El Faro del Saber" implementa Merge Sort para ordenar la lista de libros según diferentes criterios, como año de publicación, número de páginas, calificación y precio. Esta organización permite que los usuarios accedan a la información de manera intuitiva y rápida.
+Además, el uso de una estructura de pila (Stack) para gestionar los libros comprados asegura que los usuarios puedan visualizar fácilmente los libros que han adquirido. La función "mostrar()" en la clase _Stack_ proporciona una forma clara de presentar la información de los libros comprados, lo que mejora la experiencia del usuario al interactuar con el sistema.
 ### Implementa mecanismos de lectura de archivos para cargar datos a las estructuras de manera correcta
+El proyecto también destaca por su capacidad para cargar datos a las estructuras de manera eficiente. La función "leerLibrosDesdeArchivo", ubicada en el archivo "Biblioteca.h", se encarga de leer los libros desde un archivo de texto. Esta función es fundamental para la funcionalidad del programa, ya que permite la carga inicial de datos en el vector de libros.
+El uso de este mecanismo de lectura asegura que los datos se carguen correctamente en la estructura de datos adecuada, permitiendo que el sistema funcione sin problemas desde el inicio. La implementación de la lectura de archivos garantiza que la información sobre los libros esté siempre actualizada y disponible para el usuario.
 ### Implementa mecanismos de escritura de archivos para guardar los datos  de las estructuras de manera correcta
+Además de la lectura, "El Faro del Saber" también incorpora mecanismos efectivos para guardar datos de las estructuras. La función "registrarUsuario", que se encuentra en el archivo "Usuario.h", permite almacenar la información del usuario en un archivo de texto. Asimismo, la clase _Stack_ proporciona métodos para gestionar y almacenar los libros comprados, asegurando que la información se mantenga persistente entre sesiones. La implementación de estas funciones de escritura no solo garantiza que los datos se guarden correctamente, sino que también permite que el sistema se recupere de manera eficiente en futuras ejecuciones. Esto es esencial para la experiencia del usuario, ya que asegura que la información sobre los libros y los usuarios no se pierda.
