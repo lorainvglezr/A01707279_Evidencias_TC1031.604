@@ -31,29 +31,40 @@ Asegúrate de tener todos los archivos necesarios en el mismo directorio antes d
 **Merge Sort** es un algoritmo de ordenamiento que se utiliza en el proyecto del "El Faro del Saber" al momento de ordenar una lista de libros. A continuación se presenta un análisis de su complejidad en diferentes casos:
 - _División:_ En cada paso, el algoritmo divide la lista en dos mitades. Este proceso se realiza logarítmicamente, ya que cada división reduce el tamaño de la lista a la mitad. Por lo tanto, el número de divisiones necesarias para llegar a listas de un solo elemento es O(log n), donde n es el número de elementos en la lista.
 - _Ordenamiento y Fusión:_ Después de dividir la lista, Merge Sort ordena y fusiona las sublistas o listas derivadas. La fusión de dos listas ordenadas requiere recorrer todos los elementos de ambas listas, lo que tiene una complejidad de O(n).
+  
   **Complejidad en Diferentes Casos:**
+  
 - _Mejor Caso:_ Se tiene una complejidad de O(n log n) y esto ocurre porque, cuando la lista ya está ordenada, el algoritmo aún debe dividir y fusionar las listas.
 - _Caso Promedio:_ Se tiene una complejidad de O(n log n). En la mayoría de los escenarios, el algoritmo de ordenamiento sigue dividiendo y fusionando, manteniendo esta complejidad.
 - _Peor Caso:_ Tiene una complejidad de O(n log n). Esto también ocurre cuando la lista está en el orden inverso, ya que el algoritmo sigue dividiendo y fusionando.
   **Conclusión:** Merge Sort es un algoritmo eficiente con una complejidad de O(n log n), lo que lo hace adecuado para manejar listas de libros que pueden ser grandes. Esto es especialmente relevante si el programa se utiliza con una base de datos de libros extensa. Por otro lado, es un algoritmo estable, lo que significa que mantiene el orden relativo de los elementos con valores iguales. Esto es beneficioso en el contexto de los libros, ya que si dos libros tienen la misma calificación o año de publicación, su orden relativo en la lista se conservará después de la ordenación.
+  
 ### Hace un análisis de complejidad correcto y completo de todas las estructuras de datos y cada uno de sus usos en el programa
 La estructura de datos **Stack** se utiliza en el programa para gestionar los libros comprados. A continuación se presenta un análisis de su complejidad:
+
 **Operaciones en la Pila:**
+
 - _Push (Agregar un libro):_ Esta operación tiene una complejidad de O(1), ya que simplemente se agrega un elemento al final de la lista que representa la pila.
 - _Pop (Eliminar un libro):_ Similar a la operación de push, pop también tiene una complejidad de O(1), ya que implica eliminar el último elemento de la lista.
 - _Top (Obtener el libro en la cima):_ Esta operación también cuenta con complejidad de O(1), ya que solo se necesita acceder al último elemento de la lista.
 - _Mostrar libros (Recorrer la pila):_ Para mostrar todos los libros en la pila, se requiere recorrer todos los elementos, lo que tiene una complejidad de O(n), donde n es el número de libros en la pila.
+  
   **Complejidad en Diferentes Casos:**
+ 
 - _Mejor Caso:_ Se tiene una complejidad de O(1), esto si se toman en cuenta las operaciones de push, pop y top.
 - _Caso Promedio:_ Se tiene una complejidad de O(1), dado que las operaciones siguen siendo O(1) en promedio.
 - _Peor Caso:_ Se tiene una complejidad de O(n) porque solo se aplica a la operación de mostrar libros, que requiere recorrer todos los elementos en la pila.
   **_Conclusión:_** Las operaciones de inserción y eliminación en la pila son muy eficientes, con una complejidad de O(1). Sin embargo, mostrar todos los libros tiene una complejidad de O(n), por lo tanto la complejidad final de la estructura de datos es de O(n).
+  
 ### Hace un análisis de complejidad correcto y completo para todos los demás componentes del programa y determina la complejidad final del programa
+
 Además de **Merge Sort** y **Stack**, el programa incluye otras operaciones y componentes que también deben ser analizados:
 - _Lectura de Libros desde Archivo:_ La función "leerLibrosDesdeArchivo" lee los libros de un archivo y los almacena en un vector. La complejidad de esta operación depende del número de libros, por lo que se puede considerar O(n), donde n es el número de libros en el archivo.
 - _Mostrar Libros:_ La función "mostrarLibros" tiene una complejidad de O(n) al recorrer todos los libros en el vector para mostrarlos al usuario.
 - _Menú y Selección de Opciones:_ La complejidad de las operaciones dentro del menú principal depende de la opción seleccionada. Por ejemplo, las operaciones de ordenar libros, aquellas que utilizan el algoritmo de ordenamiento de Merge Sort, tienen una complejidad de O(n log n), mientras que las operaciones de mostrar libros tienen una complejidad de O(n).
+
 **Complejidad Final del Programa:**
+
 Para determinar la complejidad final del programa, es importante considerar las operaciones más complejas, en resumen acá tenemos las complejidades más relevantes de todo el programa:
 - _Lectura de libros:_ O(n)
 - _Ordenamiento de libros:_ O(n log n)
