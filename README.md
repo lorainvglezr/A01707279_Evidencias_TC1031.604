@@ -62,10 +62,7 @@ La estructura de datos **Stack** se utiliza en el programa para gestionar los li
   
 ### Hace un análisis de complejidad correcto y completo para todos los demás componentes del programa y determina la complejidad final del programa
 
-Además de **Merge Sort** y **Stack**, el programa incluye otras operaciones y componentes que también deben ser analizados:
-- _Lectura de Libros desde Archivo:_ La función "leerLibrosDesdeArchivo" lee los libros de un archivo y los almacena en un vector. La complejidad de esta operación depende del número de libros, por lo que se puede considerar O(n), donde n es el número de libros en el archivo.
-- _Mostrar Libros:_ La función "mostrarLibros" tiene una complejidad de O(n) al recorrer todos los libros en el vector para mostrarlos al usuario.
-- _Menú y Selección de Opciones:_ La complejidad de las operaciones dentro del menú principal depende de la opción seleccionada. Por ejemplo, las operaciones de ordenar libros, aquellas que utilizan el algoritmo de ordenamiento de Merge Sort, tienen una complejidad de O(n log n), mientras que las operaciones de mostrar libros tienen una complejidad de O(n).
+Además de **Merge Sort** y **Stack**, el programa incluye otras operaciones y componentes que también deben ser analizados, como lo serán a continuación
 
 **Complejidad Final del Programa:**
 
@@ -95,7 +92,11 @@ Para determinar la complejidad final del programa, es importante considerar las 
   - _Caso Promedio:_ O(n) - En promedio, se espera que se muestren todos los libros en la pila. La función seguirá recorriendo cada libro, lo que resulta en un tiempo de ejecución lineal.
   - _Peor Caso:_ O(n) - Al igual que en los otros casos, la función siempre recorrerá todos los libros en la pila. No hay variación en la complejidad, ya que la operación implica acceder a cada libro y mostrar su información, resultando en un tiempo de ejecución lineal.
 
-**_Conclusión general:_** La operación más costosa del programa es el ordenamiento de libros utilizando Merge Sort, que tiene una complejidad de O(n log n). Las operaciones de lectura y mostrar libros son lineales, con una complejidad de O(n). Dado que O(n log n) es el término dominante en el análisis, la complejidad final del programa "El Faro del Saber" es O(n log n). Esto indica que el programa es eficiente y escalable para manejar una lista considerablemente grande de libros, permitiendo a los usuarios interactuar con la biblioteca virtual de manera efectiva.
+**_Conclusión general:_** La operación más costosa o compleja del proyecto actual es, sin duda, el ordenamiento de libros utilizando el algoritmo Merge Sort, que presenta una complejidad de O(n log n). Este algoritmo es fundamental para garantizar que la colección de libros se presente de una manera organizada y accesible para los usuarios. La capacidad de ordenar eficientemente una lista de libros es esencial en un entorno bibliotecario, donde los usuarios frecuentemente buscan información específica y necesitan acceder a los datos de manera rápida y efectiva.
+
+Por otro lado, las operaciones de lectura y mostrar libros son lineales, con una complejidad de O(n). Esto significa que, al cargar los libros desde un archivo o al mostrar la lista de libros disponibles, el tiempo requerido para completar estas tareas aumenta de manera proporcional al número de libros en la colección. Aunque estas operaciones son menos complejas en términos de rendimiento, su eficiencia es igualmente importante, ya que contribuyen a la experiencia general del usuario al interactuar con la biblioteca.
+
+Dado que O(n log n) es el término dominante en el análisis de complejidad de mi proyecto titulado "El Faro del Saber", la complejidad final del sistema se puede considerar como O(n log n). Este resultado indica que el programa es no solo eficiente, sino también escalable, capaz de manejar una lista considerablemente grande de libros sin comprometer el rendimiento. Esto permite a los usuarios interactuar con la biblioteca virtual de manera efectiva, disfrutando de un acceso rápido y organizado a la información que buscan. En resumen, la combinación de un algoritmo de ordenamiento eficiente y operaciones de lectura y visualización optimizadas asegura que el sistema pueda adaptarse a las necesidades cambiantes de los usuarios, manteniendo un alto nivel de satisfacción y funcionalidad.
 
 ## SICT0302: Toma decisiones
 ### Selecciona un algoritmo de ordenamiento adecuado al problema y lo usa correctamente
@@ -124,13 +125,23 @@ A continuación, se presenta la comparación de Merge Sort con otros algoritmos 
 - _Caso Promedio:_ O(n²) Al igual que el mejor caso, el número de comparaciones realizadas es constante y no depende de la disposición de los datos, manteniendo la complejidad en O(n²). En el actual proyecto implicaría que el sistema no sería capaz de manejar eficientemente listas de libros más grandes, lo que podría resultar en una experiencia de usuario deficiente.
 - _Peor Caso:_ O(n²) En el peor caso, Selection Sort también realiza el mismo número de comparaciones, lo que resulta en O(n²). En el proyecto, esto podría llevar a un rendimiento inaceptable en situaciones donde se requiere ordenar grandes volúmenes de datos, lo que podría frustrar a los usuarios y disminuir la efectividad del sistema.
 
-_**Complejidad general**_
-- _Merge Sort:_ O(n log n) en todos los casos (mejor, promedio y peor), lo que garantiza un rendimiento consistente y eficiente en el manejo de listas de libros.
-- _Quick Sort:_ O(n log n) en el mejor y caso promedio, O(n²) en el peor caso, lo que puede ser problemático en situaciones desfavorables.
-- _Insertion Sort:_ O(n) en el mejor caso, O(n²) en el promedio y peor caso, lo que limita su eficacia en listas grandes.
-- _Selection Sort:_ O(n²) en todos los casos, lo que lo hace ineficiente para el proyecto y poco recomendable para listas grandes.
+_**Resumen de las complejidades generales**_
+1. _Merge Sort:_ O(n log n) en todos los casos (mejor, promedio y peor), lo que garantiza un rendimiento consistente y eficiente en el manejo de listas de libros.
+2. _Quick Sort:_ O(n log n) en el mejor y caso promedio, O(n²) en el peor caso, lo que puede ser problemático en situaciones desfavorables.
+3. _Insertion Sort:_ O(n) en el mejor caso, O(n²) en el promedio y peor caso, lo que limita su eficacia en listas grandes.
+4. _Selection Sort:_ O(n²) en todos los casos, lo que lo hace ineficiente para el proyecto y poco recomendable para listas grandes.
 
-_**Conclusión de la comparación de algoritmos de ordenamiento:**_ Merge Sort se destaca como la opción más adecuada para mi proyecto de "El Faro del Saber", ya que ofrece un rendimiento robusto y consistente, capaz de manejar grandes volúmenes de datos de manera efectiva y confiable. Por otra parte, Quick Sort, aunque eficiente en la práctica, presenta riesgos en su peor caso. En última instancia, Insertion y Selection Sort son menos eficientes y no se recomiendan para listas grandes, lo que podría afectar negativamente la experiencia del usuario.
+_**Conclusión de la comparación de algoritmos de ordenamiento:**_ Merge Sort se destaca como la opción más adecuada para el proyecto "El Faro del Saber" por varias razones clave. En primer lugar, su complejidad de O(n log n) en todos los casos (mejor, promedio y peor) garantiza un rendimiento robusto y predecible, lo que es fundamental al manejar grandes volúmenes de datos, como una extensa colección de libros. Esto significa que, independientemente de cómo estén ordenados inicialmente los libros, el sistema podrá procesarlos de manera eficiente, evitando tiempos de espera prolongados que podrían frustrar a los usuarios.
+
+Además, la estabilidad de Merge Sort es una ventaja significativa en este contexto. Al mantener el orden relativo de los elementos iguales, Merge Sort es capaz de manejar situaciones donde varios libros pueden compartir el mismo título, autor o editorial. Esto es crucial para una biblioteca, ya que los usuarios pueden querer ver los libros en un orden específico sin que se altere la relación entre ellos.
+
+Otro aspecto a considerar es la capacidad de Merge Sort para trabajar bien en entornos donde la memoria adicional es aceptable. Aunque requiere espacio adicional para las sublistas, su rendimiento consistente y su capacidad para ser implementado de manera eficiente en sistemas que pueden manejar este uso de memoria lo hacen ideal para el proyecto.
+
+Por otro lado, Quick Sort, aunque a menudo más rápido en la práctica, tiene el inconveniente de su peor caso de O(n²), lo que puede ser problemático si los datos de entrada no son favorables. Esto podría resultar en tiempos de espera inaceptables en situaciones críticas, como cuando los usuarios están buscando información de manera urgente.
+
+Finalmente, tanto Insertion Sort como Selection Sort son ineficientes para listas grandes, lo que los hace poco recomendables para este tipo de aplicación. Su complejidad cuadrática podría resultar en un rendimiento deficiente, afectando la satisfacción del usuario y la efectividad general del sistema.
+
+En resumen, Merge Sort no solo ofrece un rendimiento eficiente y predecible, sino que también proporciona la estabilidad necesaria para manejar datos complejos y variados, lo que lo convierte en la opción más adecuada para el proyecto "El Faro del Saber". Su capacidad para gestionar eficientemente grandes volúmenes de información asegurará que los usuarios tengan una experiencia fluida y satisfactoria al interactuar con la biblioteca.
 - _Implementación de Merge Sort:_ (líneas 41 a 70 en el archivo "Biblioteca.h")
 - _Funciones de comparación para Merge Sort:_ (líneas 72 a 80 en el archivo "Biblioteca.h")
 ### Selecciona una estructura de datos adecuada al problema y la usa correctamente
