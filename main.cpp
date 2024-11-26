@@ -1,3 +1,13 @@
+/*
+ *  main.cpp
+ *
+ *  Fecha de finalizacion: Noviembre de 2024
+ *  Nombre del autor: Lorain Valeria Gonzalez Rivas
+ *  Matricula del autor: A01707279
+ *
+ *  Version: Final 2.0
+ */
+
 #include <iostream>
 #include <stack>
 #include <string>
