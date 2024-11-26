@@ -41,6 +41,7 @@ Asegúrate de tener todos los archivos necesarios en el mismo directorio antes d
 **Conclusión:** 
 
 Merge Sort es un algoritmo eficiente con una complejidad de O(n log n), lo que lo hace adecuado para manejar listas de libros que pueden ser grandes. Esto es especialmente relevante si el programa se utiliza con una base de datos de libros extensa. Por otro lado, es un algoritmo estable, lo que significa que mantiene el orden relativo de los elementos con valores iguales. Esto es beneficioso en el contexto de los libros, ya que si dos libros tienen la misma calificación o año de publicación, su orden relativo en la lista se conservará después de la ordenación.
+- _Implementación de Merge Sort:_ (líneas 133 a 174 en el archivo "Biblioteca.h")
   
 ### Hace un análisis de complejidad correcto y completo de todas las estructuras de datos y cada uno de sus usos en el programa
 La estructura de datos **Stack** se utiliza en el programa para gestionar los libros comprados. A continuación se presenta un análisis de su complejidad:
@@ -59,6 +60,7 @@ La estructura de datos **Stack** se utiliza en el programa para gestionar los li
 - _Peor Caso:_ Se tiene una complejidad de O(n) porque solo se aplica a la operación de mostrar libros, que requiere recorrer todos los elementos en la pila.
 
 **_Conclusión:_** Las operaciones de inserción y eliminación en la pila son muy eficientes, con una complejidad de O(1). Sin embargo, mostrar todos los libros tiene una complejidad de O(n), por lo tanto la complejidad final de la estructura de datos es de O(n).
+- _Implementación de la clase Stack y sus métodos:_ (líneas 33 a 84 en el archivo "Biblioteca.h")
   
 ### Hace un análisis de complejidad correcto y completo para todos los demás componentes del programa y determina la complejidad final del programa
 
@@ -67,22 +69,22 @@ Además de **Merge Sort** y **Stack**, el programa incluye otras operaciones y c
 **Complejidad Final del Programa:**
 
 Para determinar la complejidad final del programa, es importante considerar las operaciones más complejas, en resumen acá tenemos las complejidades más relevantes de todo el programa:
-1. _**Lectura de Libros desde Archivo**_
+1. _**Lectura de Libros desde Archivo:**_ (líneas 100 a 115 en el archivo "Biblioteca.h")
 - **Complejidad:** O(n)
   - _Mejor Caso:_ O(n) - En este caso, el archivo contiene n libros y todos son leídos correctamente. La función recorrerá cada línea del archivo una vez, lo que resulta en un tiempo de ejecución lineal. No hay interrupciones ni errores en la lectura, lo que permite que todos los libros sean leídos y almacenados en el vector.
   - _Caso Promedio:_ O(n) - En promedio, se espera que la función lea todos los libros. La operación seguirá siendo lineal porque, independientemente de la disposición de los libros en el archivo, la función debe recorrer cada línea para extraer la información de cada libro. Por lo tanto, el tiempo de ejecución es proporcional al número de libros.
   - _Peor Caso:_ O(n) - En el peor de los casos, aunque haya problemas de lectura (como errores en el almacenamiento o un formato inesperado del archivo de texto), la función seguirá intentando leer cada línea. Si se encuentra un error, la lectura puede interrumpirse, pero esto no afecta la complejidad en términos de n, ya que el tiempo de lectura sigue siendo lineal en función del número de libros.
-2. _**Mostrar Libros**_
+2. _**Mostrar Libros:**_ (líneas 86 a 98 en el archivo "Biblioteca.h")
 - **Complejidad:** O(n)
   - _Mejor Caso:_ O(n) - En el mejor caso, todos los libros están disponibles y se muestran al usuario. La función recorrerá el vector de libros una vez, imprimiendo la información de cada libro, lo que resulta en un tiempo de ejecución lineal.
   - _Caso Promedio:_ O(n) - En promedio, se espera que la función muestre todos los libros en el vector. Esto significa que, sin importar el contenido del vector, la función recorrerá cada libro para mostrar su información. Por lo tanto, el tiempo de ejecución se mantiene lineal.
   - _Peor Caso:_ O(n) - Similar al caso promedio y al mejor caso, ya que la función siempre recorrerá todos los libros en el vector. No hay variación en la complejidad, ya que la operación implica acceder a cada libro y mostrar su información, lo que resulta en un tiempo de ejecución lineal.
-3.  _**Ordenamiento de Libros (Merge Sort)**_
+3.  _**Ordenamiento de Libros (Merge Sort):**_ (líneas 133 a 174 en el archivo "Biblioteca.h")
 - **Complejidad:** O(n log n)
   - _Mejor Caso:_ O(n log n) - En el mejor de los casos, Merge Sort sigue dividiendo y fusionando la lista de libros, independientemente de su disposición inicial. La complejidad se mantiene en O(n log n) porque el algoritmo siempre requiere dividir la lista en mitades y luego fusionarlas, lo que implica un número logarítmico de divisiones y un recorrido lineal para fusionar.
   - _Caso Promedio:_ O(n log n) - En promedio, la complejidad sigue siendo O(n log n) porque el algoritmo realiza las mismas operaciones de división y fusión. No importa cómo estén dispuestos los libros, el número de divisiones y fusiones necesarias para ordenar la lista se mantiene consistente.
   - _Peor Caso:_ O(n log n) - Al igual que en los otros casos, la complejidad se mantiene en O(n log n) en el peor de los casos. Aunque la lista de libros esté en orden inverso, Merge Sort seguirá dividiendo y fusionando, lo que resulta en un tiempo de ejecución que se comporta de manera predecible.
-4. _**Operaciones en la Pila (Stack)**_
+4. _**Operaciones en la Pila (Stack):**_ (líneas 33 a 84 en el archivo "Biblioteca.h")
 - **Complejidad de Push y Pop:** O(1)
   - _Mejor Caso:_ O(1) - La operación de agregar (push) o eliminar (pop) un libro de la pila se realiza en tiempo constante. No importa cuántos libros haya en la pila; la operación siempre tomará el mismo tiempo.
   - _Caso Promedio:_ O(1) - En promedio, la complejidad sigue siendo constante, ya que cada operación de push y pop no depende del tamaño de la pila.
@@ -142,8 +144,9 @@ Por otro lado, Quick Sort, aunque a menudo más rápido en la práctica, tiene e
 Finalmente, tanto Insertion Sort como Selection Sort son ineficientes para listas grandes, lo que los hace poco recomendables para este tipo de aplicación. Su complejidad cuadrática podría resultar en un rendimiento deficiente, afectando la satisfacción del usuario y la efectividad general del sistema.
 
 En resumen, Merge Sort no solo ofrece un rendimiento eficiente y predecible, sino que también proporciona la estabilidad necesaria para manejar datos complejos y variados, lo que lo convierte en la opción más adecuada para el proyecto "El Faro del Saber". Su capacidad para gestionar eficientemente grandes volúmenes de información asegurará que los usuarios tengan una experiencia fluida y satisfactoria al interactuar con la biblioteca.
-- _Implementación de Merge Sort:_ (líneas 41 a 70 en el archivo "Biblioteca.h")
-- _Funciones de comparación para Merge Sort:_ (líneas 72 a 80 en el archivo "Biblioteca.h")
+- _Implementación de Merge Sort:_ (líneas 133 a 174 en el archivo "Biblioteca.h")
+- _Funciones de comparación para Merge Sort:_ (líneas 117 a 131 en el archivo "Biblioteca.h")
+
 ### Selecciona una estructura de datos adecuada al problema y la usa correctamente
 En cuanto a la estructura de datos, opté por utilizar una Stack (pila), que se alinea perfectamente con la naturaleza de las operaciones requeridas en el sistema de gestión de libros comprados. La pila, con su comportamiento LIFO (Last In, First Out), permite un acceso eficiente a los libros más recientemente comprados, lo que es esencial para un sistema donde la rapidez de respuesta es fundamental. Las operaciones de inserción y eliminación en una pila son extremadamente eficientes, con una complejidad de O(1) en todos los casos, lo que permite que el sistema maneje las compras de manera ágil. Además, la implementación de una pila es sencilla y proporciona un control claro sobre el estado de los libros comprados, facilitando funcionalidades como el historial de compras. Esta estructura no solo mejora la eficiencia operativa del sistema, sino que también enriquece la experiencia del usuario al permitir un acceso rápido y directo a la información más relevante. En conjunto, la elección de la pila como estructura de datos complementa de manera ideal el uso de Merge Sort, creando un sistema robusto y eficiente para el presente proyecto llamado "El Faro del Saber".
 
@@ -219,8 +222,7 @@ Comparando con otras estructuras de datos, la implementación de una lista ligad
 Por otro lado, el uso de arreglos, árboles o vectores ofrece un acceso rápido a los elementos mediante índices, lo que permite localizar un libro en tiempo constante. Sin embargo, los arreglos tienen limitaciones en cuanto a la flexibilidad para insertar y eliminar elementos, especialmente si se necesita cambiar el tamaño de la estructura, lo que puede resultar en un costo computacional significativo y un pensamiento computacional un poco más avanzado del que he desarrollado y practicado hasta este momento.
 
 En resumen, el stack se destaca no solo por su eficiencia en la gestión de los libros comprados, sino también por su simplicidad al permitir que los usuarios visualicen fácilmente los últimos libros adquiridos. Esto optimiza el rendimiento del sistema y mejora la experiencia del usuario, lo que lo convierte en la elección más adecuada para mi proyecto.
-- _Definición de la clase Stack:_ (líneas 10 a 30 en el archivo "Biblioteca.h")
-- _Métodos de la clase Stack (push, pop, top, isEmpty):_ (líneas 12 a 29 en el archivo "Biblioteca.h")
+- _Definición de la clase Stack junto con sus métodos:_ (líneas 33 a 84 en el archivo "Biblioteca.h")
 
 ## SICT0303: Implementa acciones científicas
 ### Implementa mecanismos para consultar información de las estructuras correctos
@@ -233,15 +235,18 @@ La pila se carga a partir de un vector de libros. Cuando un usuario decide compr
 Además, la operación de consulta de información en la estructura de datos Stack permite a los usuarios acceder a los libros adquiridos de manera eficiente. Al invocar la función "mostrar()", se recorre la pila y se extrae la información de cada libro, lo que facilita la visualización de los detalles de las compras realizadas. Esto asegura que los usuarios tengan un acceso rápido y organizado a la información relevante sobre sus adquisiciones.
 
 En resumen, la implementación de mecanismos para consultar información en mi proyecto titulado como "El Faro del Saber" se lleva a cabo de forma efectiva a través de la combinación de un algoritmo de ordenamiento eficiente y el uso de una estructura de datos de tipo pila. Estos mecanismos permiten a los usuarios acceder a la información de los libros de manera estructurada y organizada, cumpliendo así con la competencia de "implementar mecanismos para consultar información de las estructuras correctas". La elección de estas estructuras y algoritmos no solo mejora la eficiencia del sistema, sino que también optimiza la experiencia del usuario al interactuar con la aplicación.
-- _Merge Sort y ordenamiento de libros:_ (líneas 53 a 70 en el archivo "Biblioteca.h")
-- _Mostrar libros comprados:_ (líneas 30 a 42 en el archivo "Biblioteca.h")
+- _Implementación de Merge Sort:_ (líneas 133 a 174 en el archivo "Biblioteca.h")
+- _Funciones de comparación para Merge Sort:_ (líneas 117 a 131 en el archivo "Biblioteca.h")
+- _Definición de la clase Stack junto con sus métodos:_ (líneas 33 a 84 en el archivo "Biblioteca.h")
+- _Mostrar libros comprados:_ (líneas 86 a 98 en el archivo "Biblioteca.h")
+- _Libro existente en la pila:_ (líneas 72 a 79 en el archivo "Biblioteca.h")
 ### Implementa mecanismos de lectura de archivos para cargar datos a las estructuras de manera correcta
 El proyecto también destaca por su capacidad para cargar datos a las estructuras de manera eficiente. La función "leerLibrosDesdeArchivo", ubicada en el archivo "Biblioteca.h", se encarga de leer los libros desde un archivo de texto. Esta función es fundamental para la funcionalidad del programa, ya que permite la carga inicial de datos en el vector de libros.
 El uso de este mecanismo de lectura asegura que los datos se carguen correctamente en la estructura de datos adecuada, permitiendo que el sistema funcione sin problemas desde el inicio. La implementación de la lectura de archivos garantiza que la información sobre los libros esté siempre actualizada y disponible para el usuario.
-- _Lectura de libros desde un archivo:_ (líneas 14 a 25 en el archivo "Biblioteca.h")
+- _Lectura de libros desde un archivo:_ (líneas 100 a 115 en el archivo "Biblioteca.h")
 ### Implementa mecanismos de escritura de archivos para guardar los datos  de las estructuras de manera correcta
 Además de la lectura, "El Faro del Saber" también incorpora mecanismos efectivos para guardar datos de las estructuras. La función "registrarUsuario", que se encuentra en el archivo "Usuario.h", permite almacenar la información del usuario en un archivo de texto. Asimismo, la clase _Stack_ proporciona métodos para gestionar y almacenar los libros comprados, asegurando que la información se mantenga persistente entre sesiones. La implementación de estas funciones de escritura no solo garantiza que los datos se guarden correctamente, sino que también permite que el sistema se recupere de manera eficiente en futuras ejecuciones. Esto es esencial para la experiencia del usuario, ya que asegura que la información sobre los libros y los usuarios no se pierda.
-- _Registrar usuario:_ (líneas 7 a 27 en el archivo "Usuario.h")
+- _Registrar usuario:_ (líneas 20 a 42 en el archivo "Usuario.h")
 
 # Evidencia 2: Problemas
 ### Enlaces a vídeo explicativos:
