@@ -165,7 +165,9 @@ _**Comparación de Stack con otras estructuras de datos:**_
   - _Mejor Caso:_ O(1) Acceder al elemento superior es inmediato.
   - _Caso Promedio:_ O(1) La operación sigue siendo constante, ya que no se requiere recorrer la pila.
   - _Peor Caso:_ O(1) Acceder al elemento superior es siempre O(1).
+
 _**Implicación en el proyecto:**_ Implementar una pila en mi proyecto de "El Faro del Saber" permitió gestionar de manera eficiente el historial de compras recientes de los usuarios, facilitando acciones como la revisión de compras sin demoras; es por esto que fue la estructura de datos elegida para implementar en el programa.
+
 2. _**Árbol de Búsqueda Binaria (BST)**_
 - **Inserción:**
   - _Mejor Caso:_ O(1) Si se inserta un elemento en un árbol vacío, la operación es constante.
@@ -179,7 +181,9 @@ _**Implicación en el proyecto:**_ Implementar una pila en mi proyecto de "El Fa
   - _Mejor Caso:_ O(1) Si el elemento buscado es la raíz del árbol, la búsqueda es inmediata.
   - _Caso Promedio:_ O(log n) En un árbol balanceado, la búsqueda sigue un camino logarítmico.
   - _Peor Caso:_ O(n) En un árbol desbalanceado, se podría necesitar recorrer todos los nodos, lo que resulta en una búsqueda lineal.
+
 _**Implicación en el proyecto:**_ Implementar un BST en el presente proyecto de "El Faro del Saber" sólo me hubiese permitido realizar búsquedas rápidas de libros por título o autor, aunque sería crucial mantener el árbol balanceado para evitar degradaciones en el rendimiento, por lo cual no lo consideré el más adecuado a implementar.
+
 3. _**Queue (Cola)**_
 - **Enqueue (Inserción):**
   - _Mejor Caso:_ O(1) La inserción al final de la cola es constante, ya que no se requiere recorrer la cola.
@@ -193,7 +197,9 @@ _**Implicación en el proyecto:**_ Implementar un BST en el presente proyecto de
   - _Mejor Caso:_ O(1) Acceder al primer elemento es inmediato.
   - _Caso Promedio:_ O(1) La operación sigue siendo constante.
   - _Peor Caso:_ O(1) Acceder al primer elemento es siempre O(1).
+
 _**Implicación en el proyecto:**_ Implementar una cola en "El Faro del Saber" facilitaría el manejo eficiente de las compras, asegurando que los usuarios reciban actualizaciones de compras de manera rápida y ordenada. Sin embargo, una desventaja es que, en períodos de alta demanda, la cola podría llenarse rápidamente, lo que podría resultar en tiempos de espera prolongados y afectar la satisfacción del usuario; por esto último fue que no elegí esta estructura de datos para usarla en mi proyecto.
+
 4. **Lista Ligada**
 - **Inserción:**
   - _Mejor Caso:_ O(1) Si se inserta al principio de la lista, la operación es constante.
@@ -207,7 +213,9 @@ _**Implicación en el proyecto:**_ Implementar una cola en "El Faro del Saber" f
   - _Mejor Caso:_ O(1) Acceder al primer elemento es inmediato.
   - _Caso Promedio:_ O(n) Para acceder a un elemento en medio de la lista, se requiere recorrerla, lo que puede ser ineficiente.
   - _Peor Caso:_ O(n) Acceder al último elemento implica recorrer toda la lista, resultando en una complejidad lineal.
+
 _**Implicación en el proyecto:**_ La implementación de una lista ligada en mi proyecto de "El Faro del Saber" permitiría una gestión dinámica de los libros, facilitando la inserción y eliminación eficiente de estos. Sin embargo, una desventaja es que el acceso a elementos específicos puede ser más lento, ya que requiere recorrer la lista desde el principio para encontrar el libro deseado, por lo cual no fue la estructura de datos elegida para implementar en mi programa.
+
 
 _**Resumen de las complejidades generales**_
 1. _Stack (Pila):_ O(1) para todas las operaciones (push, pop, top) en los mejores, promedio y peores casos, lo que garantiza un rendimiento constante y eficiente en el manejo de operaciones de compra recientes.
