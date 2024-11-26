@@ -130,7 +130,7 @@ _**Complejidad general**_
 - _Insertion Sort:_ O(n) en el mejor caso, O(n²) en el promedio y peor caso, lo que limita su eficacia en listas grandes.
 - _Selection Sort:_ O(n²) en todos los casos, lo que lo hace ineficiente para el proyecto y poco recomendable para listas grandes.
 
-_**Conclusión de la comparación de algoritmos de ordenamiento:**_ Merge Sort se destaca como la opción más adecuada para el proyecto "El Faro del Saber", ya que ofrece un rendimiento robusto y consistente, capaz de manejar grandes volúmenes de datos de manera efectiva y confiable. Quick Sort, aunque eficiente en la práctica, presenta riesgos en su peor caso. Insertion y Selection Sort son menos eficientes y no se recomiendan para listas grandes, lo que podría afectar negativamente la experiencia del usuario.
+_**Conclusión de la comparación de algoritmos de ordenamiento:**_ Merge Sort se destaca como la opción más adecuada para mi proyecto de "El Faro del Saber", ya que ofrece un rendimiento robusto y consistente, capaz de manejar grandes volúmenes de datos de manera efectiva y confiable. Por otra parte, Quick Sort, aunque eficiente en la práctica, presenta riesgos en su peor caso. En última instancia, Insertion y Selection Sort son menos eficientes y no se recomiendan para listas grandes, lo que podría afectar negativamente la experiencia del usuario.
 - _Implementación de Merge Sort:_ (líneas 41 a 70 en el archivo "Biblioteca.h")
 - _Funciones de comparación para Merge Sort:_ (líneas 72 a 80 en el archivo "Biblioteca.h")
 ### Selecciona una estructura de datos adecuada al problema y la usa correctamente
