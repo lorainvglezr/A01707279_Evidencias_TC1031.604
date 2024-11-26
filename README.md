@@ -110,22 +110,34 @@ A continuación, se presenta la comparación de Merge Sort con otros algoritmos 
 **Complejidad:**
 - _Mejor Caso:_ O(n log n) Merge Sort siempre divide la lista en mitades y fusiona las sublistas, independientemente de la disposición inicial de los datos. Por lo tanto, el número de divisiones es logarítmico en relación con el número de elementos (log n), y cada fusión requiere un recorrido lineal (n). Si hablamos de la implementación de este algoritmo de ordenamiento en el proyecto, este nos garantiza que incluso en el mejor de los casos, el sistema será eficiente al manejar listas de libros, lo que permite una respuesta rápida para los usuarios.
 - _Caso Promedio:_ O(n log n) Al igual que en el mejor caso, Merge Sort sigue dividiendo y fusionando la lista de manera consistente, lo que resulta en una complejidad de O(n log n) en promedio. Esto significa que en el proyecto, en situaciones típicas, los usuarios experimentarán un rendimiento confiable y eficiente al buscar y ordenar libros en la biblioteca.
-- _Peor Caso:_ O(n log n) En el peor caso, Merge Sort sigue realizando el mismo número de divisiones y fusiones que en los otros casos, por lo que su complejidad se mantiene en O(n log n). Esto asegura en el proyecto que, incluso en escenarios desfavorables, el sistema mantendrá un rendimiento aceptable, evitando tiempos de espera excesivos para los usuarios.
+- _Peor Caso:_ O(n log n) En el peor caso, Merge Sort sigue realizando el mismo número de divisiones y fusiones que en los otros casos, por lo que su complejidad se mantiene en O(n log n). 
+
+_**Implicación en el proyecto:**_ Esto asegura en el proyecto que, incluso en escenarios desfavorables, el sistema mantendrá un rendimiento aceptable, evitando tiempos de espera excesivos para los usuarios.
+
 2. _**Quick Sort**_
 **Complejidad:**
 - _Mejor Caso:_ O(n log n) En el mejor caso, Quick Sort elige un pivote que divide la lista en partes iguales, lo que resulta en log n divisiones y un recorrido lineal para cada división, dando como resultado O(n log n). En el aspecto necesario para el proyecto, este algoritmo de ordenamiento permitiría que el sistema funcione de manera eficiente en situaciones ideales, proporcionando una experiencia de usuario fluida solo en estas ocasiones.
 - _Caso Promedio:_ O(n log n) En promedio, Quick Sort también logra un buen rendimiento al elegir pivotes que dividen la lista de manera razonable, manteniendo la complejidad en O(n log n). Si se hubiese implementado este algoritmo de ordenamiento en el proyecto, los usuarios se beneficiarían de un rendimiento eficiente en la mayoría de las situaciones, lo que es fundamental para mantener la satisfacción del mismo.
-- _Peor Caso:_ O(n²) En el peor caso, si el pivote elegido es el menor o el mayor elemento de la lista, Quick Sort no divide la lista de manera efectiva, lo que lleva a O(n) divisiones en cada nivel, resultando en tener una complejidad final de O(n²). En cuestiones de la contemplación de la implementación de Quick Sort en el proyecto, esto hubiese implicado tener tiempos de espera inaceptables en ciertas circunstancias, lo que podría frustrar a los usuarios y afectar la percepción del sistema.
+- _Peor Caso:_ O(n²) En el peor caso, si el pivote elegido es el menor o el mayor elemento de la lista, Quick Sort no divide la lista de manera efectiva, lo que lleva a O(n) divisiones en cada nivel, resultando en tener una complejidad final de O(n²).
+
+_**Implicación en el proyecto:**_ En cuestiones de la contemplación de la implementación de Quick Sort en el proyecto, esto hubiese implicado tener tiempos de espera inaceptables en ciertas circunstancias, lo que podría frustrar a los usuarios y afectar la percepción del sistema.
+
 3. _**Insertion Sort**_
 **Complejidad:**
 - _Mejor Caso:_ O(n) El mejor caso ocurre cuando la lista ya está ordenada. En este caso, cada elemento solo necesita ser comparado una vez, lo que resulta en un tiempo lineal. Esto en el proyecto hubiese sido beneficioso para listas que ya están casi ordenadas, permitiendo que el sistema responda rápidamente a las solicitudes de los usuarios.
 - _Caso Promedio:_ O(n²) En promedio, Insertion Sort debe comparar cada elemento con todos los elementos anteriores en la lista, lo que resulta en una complejidad cuadrática. Si se hubiese implementado este alogritmo de ordenamiento en el proyecto, esto podría haber provocado un rendimiento deficiente al manejar listas grandes, lo que podría afectar negativamente la experiencia del usuario.
-- Peor Caso: O(n²) El peor caso ocurre cuando la lista está en orden inverso, lo que obliga a Insertion Sort a realizar el máximo número de comparaciones y desplazamientos, resultando en O(n²). Si se hubiese elegido este algoritmo de ordenamiento, iba a resultar en la obtención de tiempos de espera inaceptables, lo que podría frustrar a los usuarios y disminuir la efectividad del sistema.
+- Peor Caso: O(n²) El peor caso ocurre cuando la lista está en orden inverso, lo que obliga a Insertion Sort a realizar el máximo número de comparaciones y desplazamientos, resultando en O(n²).
+
+_**Implicación en el proyecto:**_ Si se hubiese elegido este algoritmo de ordenamiento, iba a resultar en la obtención de tiempos de espera inaceptables, lo que podría frustrar a los usuarios y disminuir la efectividad del sistema.
+
 4. _**Selection Sort**_
 **Complejidad:**
 - _Mejor Caso:_ O(n²) Selection Sort siempre realiza el mismo número de comparaciones, independientemente del estado de la lista, lo que resulta en una complejidad cuadrática. Esto significa que si se hubiera implementado este método en el proyecto, incluso en el mejor de los casos, el rendimiento será ineficiente, lo que podría llevar a tiempos de respuesta lentos y afectar la satisfacción del usuario.
 - _Caso Promedio:_ O(n²) Al igual que el mejor caso, el número de comparaciones realizadas es constante y no depende de la disposición de los datos, manteniendo la complejidad en O(n²). En el actual proyecto implicaría que el sistema no sería capaz de manejar eficientemente listas de libros más grandes, lo que podría resultar en una experiencia de usuario deficiente.
-- _Peor Caso:_ O(n²) En el peor caso, Selection Sort también realiza el mismo número de comparaciones, lo que resulta en O(n²). En el proyecto, esto podría llevar a un rendimiento inaceptable en situaciones donde se requiere ordenar grandes volúmenes de datos, lo que podría frustrar a los usuarios y disminuir la efectividad del sistema.
+- _Peor Caso:_ O(n²) En el peor caso, Selection Sort también realiza el mismo número de comparaciones, lo que resulta en O(n²).
+
+_**Implicación en el proyecto:**_ En el proyecto, esto podría llevar a un rendimiento inaceptable en situaciones donde se requiere ordenar grandes volúmenes de datos, lo que podría frustrar a los usuarios y disminuir la efectividad del sistema.
+
 
 _**Resumen de las complejidades generales**_
 1. _Merge Sort:_ O(n log n) en todos los casos (mejor, promedio y peor), lo que garantiza un rendimiento consistente y eficiente en el manejo de listas de libros.
