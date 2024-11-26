@@ -146,6 +146,79 @@ En resumen, Merge Sort no solo ofrece un rendimiento eficiente y predecible, sin
 - _Funciones de comparación para Merge Sort:_ (líneas 72 a 80 en el archivo "Biblioteca.h")
 ### Selecciona una estructura de datos adecuada al problema y la usa correctamente
 En cuanto a la estructura de datos, opté por utilizar una Stack (pila), que se alinea perfectamente con la naturaleza de las operaciones requeridas en el sistema de gestión de libros comprados. La pila, con su comportamiento LIFO (Last In, First Out), permite un acceso eficiente a los libros más recientemente comprados, lo que es esencial para un sistema donde la rapidez de respuesta es fundamental. Las operaciones de inserción y eliminación en una pila son extremadamente eficientes, con una complejidad de O(1) en todos los casos, lo que permite que el sistema maneje las compras de manera ágil. Además, la implementación de una pila es sencilla y proporciona un control claro sobre el estado de los libros comprados, facilitando funcionalidades como el historial de compras. Esta estructura no solo mejora la eficiencia operativa del sistema, sino que también enriquece la experiencia del usuario al permitir un acceso rápido y directo a la información más relevante. En conjunto, la elección de la pila como estructura de datos complementa de manera ideal el uso de Merge Sort, creando un sistema robusto y eficiente para el presente proyecto llamado "El Faro del Saber".
+
+_**Comparación de Stack con otras estructuras de datos:**_
+
+1. _**Stack (Pila)**_
+- **Push (Inserción):**
+  - _Mejor Caso:_ O(1) La inserción en una pila siempre se realiza en la parte superior, independientemente de cuántos elementos haya. Por lo tanto, no hay condiciones que afecten el tiempo de inserción.
+  - _Caso Promedio:_ O(1) Similar al mejor caso, ya que la operación no depende de la cantidad de elementos en la pila.
+  - _Peor Caso:_ O(1) Nuevamente, la inserción es constante, sin importar el estado de la pila.
+- **Pop (Eliminación):**
+  - _Mejor Caso:_ O(1) La eliminación del último elemento agregado se realiza de manera inmediata.
+  - _Caso Promedio:_ O(1) La operación sigue siendo constante, ya que no hay recorrido involucrado.
+  - _Peor Caso:_ O(1) La eliminación sigue siendo constante, sin importar el número de elementos.
+- **Top (Acceso al elemento superior):**
+  - _Mejor Caso:_ O(1) Acceder al elemento superior es inmediato.
+  - _Caso Promedio:_ O(1) La operación sigue siendo constante, ya que no se requiere recorrer la pila.
+  - _Peor Caso:_ O(1) Acceder al elemento superior es siempre O(1).
+_**Implicación en el proyecto:**_ Implementar una pila en mi proyecto de "El Faro del Saber" permitió gestionar de manera eficiente el historial de compras recientes de los usuarios, facilitando acciones como la revisión de compras sin demoras; es por esto que fue la estructura de datos elegida para implementar en el programa.
+2. _**Árbol de Búsqueda Binaria (BST)**_
+- **Inserción:**
+  - _Mejor Caso:_ O(1) Si se inserta un elemento en un árbol vacío, la operación es constante.
+  - _Caso Promedio:_ O(log n) En un árbol balanceado, la inserción se realiza siguiendo un camino logarítmico desde la raíz hasta una hoja, lo que permite que la operación sea eficiente.
+  - _Peor Caso:_ O(n) Si se insertan elementos en orden ascendente o descendente, el árbol se convierte en una lista enlazada, lo que requiere recorrer todos los nodos para encontrar el lugar correcto para la inserción.
+- **Eliminación:**
+  - _Mejor Caso:_ O(1) La eliminación de un nodo hoja (sin hijos) se puede realizar de manera constante.
+  - _Caso Promedio:_ O(log n) En un árbol balanceado, la eliminación implica un recorrido logarítmico para encontrar el nodo a eliminar y reorganizar el árbol.
+  - _Peor Caso:_ O(n) Si el árbol es desbalanceado, puede ser necesario recorrer todos los nodos para encontrar el nodo a eliminar.
+- **Búsqueda:**
+  - _Mejor Caso:_ O(1) Si el elemento buscado es la raíz del árbol, la búsqueda es inmediata.
+  - _Caso Promedio:_ O(log n) En un árbol balanceado, la búsqueda sigue un camino logarítmico.
+  - _Peor Caso:_ O(n) En un árbol desbalanceado, se podría necesitar recorrer todos los nodos, lo que resulta en una búsqueda lineal.
+_**Implicación en el proyecto:**_ Implementar un BST en el presente proyecto de "El Faro del Saber" sólo me hubiese permitido realizar búsquedas rápidas de libros por título o autor, aunque sería crucial mantener el árbol balanceado para evitar degradaciones en el rendimiento, por lo cual no lo consideré el más adecuado a implementar.
+3. _**Queue (Cola)**_
+- **Enqueue (Inserción):**
+  - _Mejor Caso:_ O(1) La inserción al final de la cola es constante, ya que no se requiere recorrer la cola.
+  - _Caso Promedio:_ O(1) Siempre que se inserte un nuevo elemento, la operación es constante.
+  - _Peor Caso:_ O(1) La inserción sigue siendo constante, sin importar el tamaño de la cola.
+- **Dequeue (Eliminación):**
+  - _Mejor Caso:_ O(1) La eliminación del primer elemento es inmediata.
+  - _Caso Promedio:_ O(1) La operación sigue siendo constante.
+  - _Peor Caso:_ O(1) La eliminación es siempre O(1), ya que no hay recorrido involucrado.
+- **Front (Acceso al primer elemento):**
+  - _Mejor Caso:_ O(1) Acceder al primer elemento es inmediato.
+  - _Caso Promedio:_ O(1) La operación sigue siendo constante.
+  - _Peor Caso:_ O(1) Acceder al primer elemento es siempre O(1).
+_**Implicación en el proyecto:**_ Implementar una cola en "El Faro del Saber" facilitaría el manejo eficiente de las compras, asegurando que los usuarios reciban actualizaciones de compras de manera rápida y ordenada. Sin embargo, una desventaja es que, en períodos de alta demanda, la cola podría llenarse rápidamente, lo que podría resultar en tiempos de espera prolongados y afectar la satisfacción del usuario; por esto último fue que no elegí esta estructura de datos para usarla en mi proyecto.
+4. **Lista Ligada**
+- **Inserción:**
+  - _Mejor Caso:_ O(1) Si se inserta al principio de la lista, la operación es constante.
+  - _Caso Promedio:_ O(n) Si se inserta en medio o al final, se requiere recorrer la lista para encontrar el lugar adecuado, lo que puede llevar tiempo lineal.
+  - _Peor Caso:_ O(n) Si se inserta al final y se debe recorrer toda la lista, la complejidad es lineal.
+- **Eliminación:**
+  - _Mejor Caso:_ O(1) La eliminación del primer elemento es constante, ya que solo se necesita actualizar el puntero.
+  - _Caso Promedio_: O(n) Si se elimina un elemento en medio o al final, se debe recorrer la lista para encontrar el nodo a eliminar, lo que puede ser lineal.
+  - _Peor Caso:_ O(n) Si se debe recorrer toda la lista para encontrar el elemento a eliminar, la complejidad es lineal.
+- **Acceso:**
+  - _Mejor Caso:_ O(1) Acceder al primer elemento es inmediato.
+  - _Caso Promedio:_ O(n) Para acceder a un elemento en medio de la lista, se requiere recorrerla, lo que puede ser ineficiente.
+  - _Peor Caso:_ O(n) Acceder al último elemento implica recorrer toda la lista, resultando en una complejidad lineal.
+_**Implicación en el proyecto:**_ La implementación de una lista ligada en mi proyecto de "El Faro del Saber" permitiría una gestión dinámica de los libros, facilitando la inserción y eliminación eficiente de estos. Sin embargo, una desventaja es que el acceso a elementos específicos puede ser más lento, ya que requiere recorrer la lista desde el principio para encontrar el libro deseado, por lo cual no fue la estructura de datos elegida para implementar en mi programa.
+
+_**Resumen de las complejidades generales**_
+1. _Stack (Pila):_ O(1) para todas las operaciones (push, pop, top) en los mejores, promedio y peores casos, lo que garantiza un rendimiento constante y eficiente en el manejo de operaciones de compra recientes.
+2. _Árbol de Búsqueda Binaria (BST):_ O(1) en el mejor caso, O(log n) en el caso promedio y O(n) en el peor caso para inserción y búsqueda. Esto implica que, aunque puede ser eficiente en un árbol balanceado, el rendimiento puede degradarse significativamente si el árbol se desbalancea.
+3. _Queue (Cola):_ O(1) para todas las operaciones (enqueue, dequeue, front) en los mejores, promedio y peores casos, lo que asegura un procesamiento rápido y ordenado de las solicitudes de compra.
+4. _Lista Ligada:_ O(1) en el mejor caso para inserciones y eliminaciones al principio, pero O(n) en el caso promedio y peor para acceso y eliminación en medio o al final. Esto limita su eficacia en operaciones donde se requiere un acceso rápido a elementos específicos.
+
+_**Conclusión de la comparación de estructuras de datos:**_ El uso de una estructura de datos tipo stack (pila) se destacaba como la opción más adecuada para implementar en mi proyecto de "El Faro del Saber" debido a su capacidad para manejar eficientemente los libros comprados mediante un enfoque de último en entrar, primero en salir (LIFO). Esta característica es ideal para el sistema de compras, ya que permite a los usuarios acceder rápidamente al libro más recientemente adquirido, lo que mejora la experiencia del usuario.
+
+Comparando con otras estructuras de datos, la implementación de una lista ligada permitiría una gestión dinámica de los libros, facilitando la inserción y eliminación de estos. Sin embargo, su desventaja radica en el acceso más lento a elementos específicos, ya que requiere recorrer la lista desde el principio hasta encontrar el libro deseado.
+
+Por otro lado, el uso de arreglos, árboles o vectores ofrece un acceso rápido a los elementos mediante índices, lo que permite localizar un libro en tiempo constante. Sin embargo, los arreglos tienen limitaciones en cuanto a la flexibilidad para insertar y eliminar elementos, especialmente si se necesita cambiar el tamaño de la estructura, lo que puede resultar en un costo computacional significativo y un pensamiento computacional un poco más avanzado del que he desarrollado y practicado hasta este momento.
+
+En resumen, el stack se destaca no solo por su eficiencia en la gestión de los libros comprados, sino también por su simplicidad al permitir que los usuarios visualicen fácilmente los últimos libros adquiridos. Esto optimiza el rendimiento del sistema y mejora la experiencia del usuario, lo que lo convierte en la elección más adecuada para mi proyecto.
 - _Definición de la clase Stack:_ (líneas 10 a 30 en el archivo "Biblioteca.h")
 - _Métodos de la clase Stack (push, pop, top, isEmpty):_ (líneas 12 a 29 en el archivo "Biblioteca.h")
 
